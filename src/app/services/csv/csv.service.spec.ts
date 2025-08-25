@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing'
 
-import { CsvService } from './csv.service'
+import { ExcelService } from './excel.service'
 
-describe('CsvService', () => {
-  let service: CsvService
+describe('ExcelService', () => {
+  let service: ExcelService
 
   beforeEach(() => {
     TestBed.configureTestingModule({})
-    service = TestBed.inject(CsvService)
+    service = TestBed.inject(ExcelService)
   })
 
   it('should be created', () => {
