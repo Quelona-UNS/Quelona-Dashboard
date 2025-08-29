@@ -21,7 +21,7 @@ import { MatInputModule } from '@angular/material/input'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatTooltipModule } from '@angular/material/tooltip'
-import { CsvService } from './services/csv/csv.service'
+import { ExcelService } from './services/csv/csv.service'
 import { MatDialogModule } from '@angular/material/dialog'
 import { ConfirmationModalComponent } from './modal/modal.component'
 import { FilterComponent } from './filter/filter.component'
@@ -66,7 +66,7 @@ import { MatIconModule } from '@angular/material/icon'
   ],
   providers: [
     GpsPositionsService,
-    CsvService,
+    ExcelService,
     importProvidersFrom(provideFirebaseApp(() => initializeApp(environment.firebase))),
     importProvidersFrom(provideFirestore(() => getFirestore())),
     provideAnimations(),

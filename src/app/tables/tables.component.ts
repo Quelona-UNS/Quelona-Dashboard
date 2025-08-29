@@ -6,7 +6,7 @@ import { MatPaginator } from '@angular/material/paginator'
 import { MatSort } from '@angular/material/sort'
 import { formatDate } from '@angular/common'
 import { Sort } from '@angular/material/sort'
-import { CsvService } from '../services/csv/csv.service'
+import { ExcelService } from '../services/csv/csv.service'
 import { MatDialog } from '@angular/material/dialog'
 import { ConfirmationModalComponent } from '../modal/modal.component'
 import { FilterComponent } from '../filter/filter.component'
@@ -89,7 +89,7 @@ export class TablesComponent implements OnInit {
 
   constructor(
     private positionsService: GpsPositionsService,
-    private csvService: CsvService,
+    private excelService: ExcelService,
     public dialog: MatDialog) {}
 
   ngOnInit(): void {
@@ -106,7 +106,7 @@ export class TablesComponent implements OnInit {
   }
 
   toCsv() {
-    this.csvService.exportToCsv('posiciones.csv', this.dataSource.data)
+    this.excelService.exportToExcel('posiciones', this.dataSource.data)
   }
 
   showDialog(type: ModalValue, confirmationFunction: () => void): void {

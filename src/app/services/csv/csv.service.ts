@@ -13,7 +13,7 @@ export class ExcelService {
     }
 
     // Preparamos un "molde" para saber qué columnas exportar
-    const objectIndicator = { ...rows[0] }
+    const objectIndicator = Object.apply({}, [rows[0]])
     delete objectIndicator.id
     delete objectIndicator.timestamp
     const keys = Object.keys(objectIndicator)
